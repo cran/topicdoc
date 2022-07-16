@@ -6,13 +6,18 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/topicdoc)](https://CRAN.R-project.org/package=topicdoc)
+[![cran
+checks](https://cranchecks.info/badges/summary/topicdoc)](https://cran.r-project.org/web/checks/check_results_topicdoc.html)
 [![Travis build
 status](https://travis-ci.org/doug-friedman/topicdoc.svg?branch=master)](https://travis-ci.org/doug-friedman/topicdoc)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/doug-friedman/topicdoc?branch=master&svg=true)](https://ci.appveyor.com/project/doug-friedman/topicdoc)
+[![CircleCI build
+status](https://circleci.com/gh/doug-friedman/topicdoc.svg?style=svg)](https://app.circleci.com/pipelines/github/doug-friedman/topicdoc)
 [![Codecov test
-coverage](https://codecov.io/gh/doug-friedman/topicdoc/branch/master/graph/badge.svg)](https://codecov.io/gh/doug-friedman/topicdoc?branch=master)
+coverage](https://codecov.io/gh/doug-friedman/topicdoc/branch/master/graph/badge.svg)](https://app.codecov.io/gh/doug-friedman/topicdoc?branch=master)
+[![R-CMD-check](https://github.com/doug-friedman/topicdoc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/doug-friedman/topicdoc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Like a (good) doctor, the goal of topicdoc is to help diagnose issues
@@ -27,8 +32,14 @@ supported. However, I’m targeting those from the `stm` library next.
 
 ## Installation
 
+You can install the CRAN version of topicdoc with:
+
+``` r
+install.packages("topicdoc")
+```
+
 You can install the development version of topicdoc from
-[Github](https://www.github.com/doug-friedman/topicdoc) with:
+[Github](https://github.com/doug-friedman/topicdoc) with:
 
 ``` r
 remotes::install_github("doug-friedman/topicdoc")
@@ -118,13 +129,12 @@ and exclusivity confirm our susipicion about the generic nature of the
 topic.
 
 Alternatively, you can see that Topic 2 - the one centered around
-financial news - is the most coherent and exclusive
-topic.
+financial news - is the most coherent and exclusive topic.
 
 ## Diagnostics/Metrics Included
 
 |                Diagnostic/Metric                |      Function       |                                      Description                                       |
-| :---------------------------------------------: | :-----------------: | :------------------------------------------------------------------------------------: |
+|:-----------------------------------------------:|:-------------------:|:--------------------------------------------------------------------------------------:|
 |                   topic size                    |    `topic_size`     |                      Total (weighted) number of tokens per topic                       |
 |                mean token length                | `mean_token_length` |               Average number of characters for the top tokens per topic                |
 |        distance from corpus distribution        | `dist_from_corpus`  |  Distance of a topic’s token distribution from the overall corpus token distribution   |
@@ -138,9 +148,9 @@ topic.
 The following documents provide key references for the
 diagnostics/metrics included in the package.
 
-  - [Jordan Boyd-Graber, David Mimno, and David Newman, 2014. Care and
+-   [Jordan Boyd-Graber, David Mimno, and David Newman, 2014. Care and
     Feeding of Topic Models: Problems, Diagnostics, and Improvements.
     CRC Handbooks of Modern Statistical Methods. CRC Press, Boca Raton,
     Florida.](http://www.people.fas.harvard.edu/~airoldi/pub/books/b02.AiroldiBleiEroshevaFienberg2014HandbookMMM/Ch12_MMM2014.pdf)
-  - [MALLET Topic Model
-    Diagnostics](http://mallet.cs.umass.edu/diagnostics.php)
+-   [MALLET Topic Model
+    Diagnostics](https://mallet.cs.umass.edu/diagnostics.php)
